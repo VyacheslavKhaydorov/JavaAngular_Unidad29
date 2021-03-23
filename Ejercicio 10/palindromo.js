@@ -1,12 +1,13 @@
 //¿Es la cadena de texto un palíndromo?
 let cadena = prompt('Introduce una palabra o frase:');
 
-//Pasamos la cadena caracter por caracter a dos vectores, a uno en orden invertido, y los comparamos
+//Pasamos la cadena a minúsculas, y después caracter por caracter a dos vectores, a uno en orden invertido, y los comparamos
+cadena = cadena.toLowerCase();
 let cadenaDelDerecho = [];
 let cadenaDelReves = [];
 
 for (let i = 0; i < cadena.length; i++) {
-    cadenaDelDerecho[i] = cadena[i].toLowerCase;    //Necesario para que las mayúsculas no molesten 
+    cadenaDelDerecho[i] = cadena[i];
 }
 
 for (let i = cadenaDelDerecho.length; i >= 0; i--) {
@@ -17,4 +18,3 @@ if (cadenaDelDerecho.join('') == cadenaDelReves.join(''))   //Juntamos los vecto
     alert('Esto es un palíndromo!');
 else
     alert('Esto NO es un palíndromo');
-    
